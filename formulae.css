@@ -1,0 +1,57 @@
+body {
+    background-image: url('C:\localhost\htdocs\Mini_Project\formulae.jpg');
+    background-size:cover;   
+}
+
+table{
+  font-family: Times New Roman; 
+  color:black; 
+  font-size: 17px; 
+  font-weight: bold;
+  border: 1px solid black;
+  border-color: black;
+  margin: 0 auto;
+  font-size: large;
+  border-collapse: collapse;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    orange 67%,
+    teal 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.button {
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float:right;
+  }
+  .button5 {border-radius: 100%;}

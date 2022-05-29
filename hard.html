@@ -1,0 +1,325 @@
+<html>
+
+<head>
+    <title>Hard Coding</title>
+    <link rel="stylesheet" type="text/css" href="codingLevels.css">
+</head>
+
+<body>
+    <a href="coding.html"><button class="return">Back</button></a>
+    <h2>1. Magic Set</h2>
+    <hr>
+    <p>
+        Katya has a sequence of integers a1,a2,…,an and an integer m.
+
+        She defines a good sequence of integers as a non-empty sequence such that the sum of the elements in each of its
+        non-empty subsequences is divisible by m.
+
+        Katya wants to know the number of good subsequences of the sequence a. Can you help her?
+    </p>
+    <hr>
+    <p>
+    <div>Input</div><br>
+    <ul>
+        <li>The first line of the input contains a single integer T denoting the number of test cases. The description
+            of T test cases follows.</li>
+        <li>The first line of each test case contains two space-separated integers n and m.</li>
+        <li>The second line contains n space-separated integers a1,a2,…,an</li>
+    </ul>
+    </p>
+    <hr>
+    <p>
+    <div> Output</div><br>
+    For each test case, print a single line containing one integer — the number of good subsequences.
+    </p>
+    <hr>
+    <p>
+        <SCRIPT>
+            const viewSolution1 = document.querySelector('.q1');
+
+            viewSolution1.addEventListener('toggle', event => {
+                if (event.target.open) {
+                    console.log('open');
+                } else {
+                    console.log('closed');
+                }
+            });
+        </SCRIPT>
+    <details class="q1">
+    <summary>View Solution</summary>
+    <p><b>Code in PYTHON</b></p>
+    <pre>
+    from math import *
+    import sys
+    def input(): 
+        return sys.stdin.readline().replace('\n','').strip()
+        sys.setrecursionlimit(10**9)
+        for _ in range(int(input())):
+        n,m = list(map(int,input().split()))
+        l = list(map(int,input().split()))
+        c = 0
+        for i in l:
+            if i%m == 0:
+                c += 1
+            print(2**c - 1)
+    </pre>
+    </details>
+
+    </p>
+    <br>
+    <h2>2. A Puzzle Game </h2>
+    <hr>
+    <p>
+        Johnny has some difficulty memorizing the small prime numbers. So, his computer science teacher has asked him to
+        play with the following puzzle game frequently.
+
+        The puzzle is a 3x3 board consisting of numbers from 1 to 9. The objective of the puzzle is to swap the tiles
+        until the following final state is reached:
+
+        1 2 3
+        4 5 6
+        7 8 9
+        At each step, Johnny may swap two adjacent tiles if their sum is a prime number. Two tiles are considered
+        adjacent if they have a common edge.
+
+        Help Johnny to find the shortest number of steps needed to reach the goal state.
+    </p>
+    <hr>
+    <p>
+    <div>Input</div><br>
+    The first line contains t, the number of test cases (about 50). Then t test cases follow. Each test case consists of
+    a 3x3 table describing a puzzle which Johnny would like to solve.
+
+    The input data for successive test cases is separated by a blank line.
+
+    </p>
+    <hr>
+    <p>
+    <div> Output</div><br>
+    For each test case print a single line containing the shortest number of steps needed to solve the corresponding
+    puzzle. If there is no way to reach the final state, print the number -1.
+    <hr>
+    <p>
+        <SCRIPT>
+            const viewSolution2 = document.querySelector('.q2');
+
+            viewSolution2.addEventListener('toggle', event => {
+                if (event.target.open) {
+                    console.log('open');
+                } else {
+                    console.log('closed');
+                }
+            });
+        </SCRIPT>
+    <details class="q2">
+        <summary>View Solution</summary>
+        <p><b>Code in PYTHON</b></p>
+        <pre>
+        swap = ((0,1), (0,3), (1,2), (1,4), (2,5), (3,4), (3,6), (4,5), (4,7), (5,8), (6,7), (7,8))
+        prime = (3,5,7,11,13,17)
+        p = {}
+        p[(1,2,3,4,5,6,7,8,9)] = 0
+        q = [[1,2,3,4,5,6,7,8,9]]    
+        while(q):
+            cur = q.pop(0)
+        for i in swap:
+            if cur[i[0]] + cur[i[1]] in prime:
+                new = cur[:]
+                new[i[0]], new[i[1]] = new[i[1]], new[i[0]]
+                if(tuple(new) not in p):
+                    p[tuple(new)] = p[tuple(cur)] + 1
+                    q.append(new)
+                #print(p)
+            t = int(input())
+            for _ in range(t):
+                input()
+                a = []
+                for i in range(3):
+                    a += [int(x) for x in input().split()]
+                #print(a)
+                if(tuple(a) in p):
+                    print(p[tuple(a)])
+                else:
+                    print(-1)
+            
+                </pre>
+    </details>
+
+    </p>
+    <br>
+    <h2>3. Three Friends</h2>
+    <hr>
+    <p>
+        There are three friends; let's call them A, B, C. They made the following statements:
+
+        A: "I have x Rupees more than B."
+        B: "I have y rupees more than C."
+        C: "I have z rupees more than A."
+        You do not know the exact values of x,y,z. Instead, you are given their absolute values, i.e. X=|x|, Y=|y| and
+        Z=|z|. Note that x, y, z may be negative; "having −r rupees more" is the same as "having r rupees less".
+
+        Find out if there is some way to assign amounts of money to A, B, C such that all of their statements are true.
+    </p>
+    <hr>
+    <p>
+    <div>Input</div><br>
+    <ul>
+        <li>The first line of the input contains a single integer T denoting the number of test cases. The description
+            of T test cases follows.</li>
+        <li>The first and only line of each test case contains three space-separated integers X, Y and Z.</li>
+    </ul>
+    </p>
+    <hr>
+    <p>
+    <div> Output</div><br>
+    For each test case, print a single line containing the string "yes" if the presented scenario is possible or "no"
+    otherwise (without quotes).
+    </p>
+    <hr>
+    <p>
+        <SCRIPT>
+            const viewSolution3 = document.querySelector('.q3');
+
+            viewSolution3.addEventListener('toggle', event => {
+                if (event.target.open) {
+                    console.log('open');
+                } else {
+                    console.log('closed');
+                }
+            });
+        </SCRIPT>
+    <details class="q3">
+        <summary>View Solution</summary>
+        <p><b>Code in PYTHON</b></p>
+        <pre>
+        for i in range(int(input())):
+            X,Y,Z = map(int,input().split())
+        if X + Y == Z:
+            print("yes")
+        elif Y + Z == X:
+            print("yes")
+        elif X + Z == Y:
+            print("yes")
+        else:
+            print("no")
+        </pre>
+    </details>
+    </p>
+    <br>
+    <h2>4. Play Piano </h2>
+    <hr>
+    <p>
+        Two sisters, A and B, play the piano every day. During the day, they can play in any order. That is, A might
+        play first and then B, or it could be B first and then A. But each one of them plays the piano exactly once per
+        day. They maintain a common log, in which they write their name whenever they play.
+
+        You are given the entries of the log, but you're not sure if it has been tampered with or not. Your task is to
+        figure out whether these entries could be valid or not.
+    </p>
+    <hr>
+    <p>
+    <div>Input</div><br>
+    <ul>
+        <li>The first line of the input contains an integer T denoting the number of test cases. The description of the
+            test cases follows.</li>
+        <li>The first line of each test case contains a string s denoting the entries of the log.</li>
+    </ul>
+    </p>
+    <hr>
+    <p>
+    <div> Output</div><br>
+    For each test case, output yes or no according to the answer to the problem.
+    </p>
+    <hr>
+    <p>
+        <SCRIPT>
+            const viewSolution4 = document.querySelector('.q4');
+
+            viewSolution4.addEventListener('toggle', event => {
+                if (event.target.open) {
+                    console.log('open');
+                } else {
+                    console.log('closed');
+                }
+            });
+        </SCRIPT>
+    <details class="q4">
+        <summary>View Solution</summary>
+        <p><b>Code in PYTHON</b></p>
+        <pre>
+        t=int(input())
+        for i in range(t):
+            s=input()
+            l=len(s)
+            f=1
+            if l%2==0:
+                for i in range(0,l,2):
+                    if not(s[i]=='A' and s[i+1]=='B' or s[i]=='B' and s[i+1]=='A'):
+                        f=0
+                        break
+                        if f==1:
+                            print("yes")
+                        else:
+                            print("no")
+                            
+                </pre>
+    </details>
+    </p>
+    <br>
+    <h2>5. How Many Digits Do I Have </h2>
+    <hr>
+    <p>
+        Write a program to obtain a number (N) from the user and display whether the number is a one digit number, 2
+        digit number, 3 digit number or more than 3 digit number
+    </p>
+    <hr>
+    <p>
+    <div>Input</div><br>
+    First line will contain the number N
+    </p>
+    <hr>
+    <p>
+    <div> Output</div><br>
+    Print "1" if N is a 1 digit number.
+
+    Print "2" if N is a 2 digit number.
+
+    Print "3" if N is a 3 digit number.
+
+    Print "More than 3 digits" if N has more than 3 digits.
+    </p>
+    <hr>
+    <p>
+        <SCRIPT>
+            const viewSolution5 = document.querySelector('.q5');
+
+            viewSolution5.addEventListener('toggle', event => {
+                if (event.target.open) {
+                    console.log('open');
+                } else {
+                    console.log('closed');
+                }
+            });
+        </SCRIPT>
+    <details class="q5">
+        <summary>View Solution</summary>
+        <p><b>Code in PYTHON</b></p>
+        <pre>
+        def countDigit(n):
+        count = 0
+        while n != 0:
+            n //= 10
+            count += 1
+        return count 
+        # Driver Code
+        n = 345289467
+        print("Number of digits : % d" % (countDigit(n)))
+         </pre>
+    </details>
+    </p>
+    <br>
+
+    <a href="coding.html"><button class="return">Back</button></a>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body{
+    background-image:url(https://this.deakin.edu.au/wp-content/uploads/2017/07/studytips-header.jpg);
+    background-size:cover;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-image:url(https://th.bing.com/th/id/OIP.8MguzuUrQq8UiXDP55l2WQHaEo?pid=ImgDet&rs=1);
+    background-size:cover;
+    color: white;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-image:url(https://onlyvectorbackgrounds.com/wp-content/uploads/2019/03/Abstract-Subtle-Faded-Circles-Background-Navy.jpg);
+    background-size:cover;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px 170px;
+  }
+  
+ 
+  /* Style the counter cards */
+  .card {
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  button{
+      width:90px;
+      height:30px;
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_oTkj-rngCVa6G244CvovdnVkI_tpzRfllw&usqp=CAU);
+      background-size:cover;
+      
+  }
+  span{
+      color:black;
+      font-family:fantasy;
+
+  }
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px; padding-top:20px;padding-left:200px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .b1,.b2,.b3,.b4{
+    border-radius: 100%;
+    
+
+  }

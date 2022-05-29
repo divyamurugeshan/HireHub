@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>Formulae Chart</title>
+	<style>
+    body {
+    background-image: url('formulae.jpg');
+    background-size:cover;   
+}
+
+table{
+  font-family: Times New Roman; 
+  color:black; 
+  font-size: 17px; 
+  font-weight: bold;
+  border: 1px solid black;
+  border-color: black;
+  margin: 0 auto;
+  font-size: large;
+  border-collapse: collapse;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    orange 67%,
+    teal 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.button {
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float:right;
+  }
+  .button5 {border-radius: 100%;}
+	</style>
+    </head>
+<body>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="animate-charcter"> Basic Formulas</h3>
+      </div>
+    </div>
+  </div>
+<table align="center" cellpadding = "10">
+
+<tr>
+<th>Train</th> 
+<td>a km/hr to m/s: (a*5/18) m/s</td>
+<td>a m/s to km/hr: (a*18/5) km/hr</td>
+<td>Train is moving in same direction then relative speed: (u-v)m/s</td>
+<td>Train is moving in opposite direction then relative speed: (u+v)m/s</td>
+<td>Two trains of legth a meteres and b meteres are moving in opposite directions at u m/s and v m/s: (a+b)/(u+v) sec</td>
+<td>Two trains of legth a meteres and b meteres are moving in same directions at u m/s and v m/s: (a+b)/(u-v) sec</td>
+</tr>
+
+<tr>
+<th>Simple Interest</th>
+<td>SI=(P*T*R)/100</td>
+<td>P=(100*SI)/(R*T)</td>
+<td>R=(100*SI)/(P*T)</td>
+<td>T=(100*SI)/(P*R)</td>
+</tr>
+
+<tr>
+<th>Compound Interest</th>
+<td>Amount=P(1+R/100)^n</td>
+<td>Amount=P(1+(R/2)/100)^2n</td>
+<td>Amount=P(1+(R/4)/100)^4n</td>
+</tr>
+
+<tr>
+<th>Profit and Loss</th>
+<td>Profit=(SP)-(CP)</td>
+<td>Loss=(CP)-(SP)</td>
+<td>Profit %=(Profit*100)/CP</td>
+<td>Loss %=(Loss*100)/CP</td>
+</tr>
+
+<tr>
+<th>Average</th>
+<td>Average= (Sum of observations)/ (Number of observations)
+</tr>
+
+<tr>
+<th>Alligation</th>
+<td>(Quantity of cheaper/ Quantity of dearer)= (CP of dearer- Mean Price)/(Mean price- CP of cheaper)</td>
+</tr>
+
+<tr>
+<th>Percentage</th>
+<td>Percentage increase= (R/(100+R)*100)%</td>
+<td>Percentage decrease= (R/(100-R)*100)%</td>
+<td>Population after n years= P(1+R/100)^n</td>
+<td>Population n years ago= P/(1+R/100)^n</td>
+</tr>
+
+<tr>
+<th>Boats and Strams</th>
+<td>Downstream=(u+v) km/hr</td>
+<td>Upstream=(u-v) km/hr</td>
+<td>Speed in still water= 1/2(a+b) km/hr </td>
+<td> Rate of stream= 1/2(a-b) km/hr</td>
+</tr>
+
+<tr>
+<th>General formulas</th>
+<td>(a+b)(a-b)=(a^2-b^2)</td>
+<td>(a+b)^2=(a^2+b^2+2ab)</td>
+<td>(a-b)^2=(a^2+b^2-2ab)</td>
+<td>(a^3+b^3)=(a+b)(a^2-ab+ b^2)</td>
+<td>(a^3-b^3)=(a-b)(a^2+ab+b^2)</td> 
+</tr>
+
+<tr>
+<th>Speed Time and Distance</th>
+<td> Speed=(Distance/Time)</td>
+<td> Time=(Distance/Speed)</td>
+<td> Distance=(Speed*Time)</td>
+</tr>
+</table>
+<a href="hh_student.html"><button class="button button5">Back</button></a>
+</body>
+</html>

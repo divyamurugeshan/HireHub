@@ -1,0 +1,26 @@
+#container
+{
+    background-image:url("https://th.bing.com/th/id/OIP.KkzIb5AUWTfhwfRhN-PDFgHaDL?pid=ImgDet&rs=1");
+width:90%;
+background-size:cover;
+height:200px;
+padding:20px;
+margin:0 auto;
+border: 5px solid grey;
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items:flex-start;
+}
+#container div
+{
+width:100px;
+height:100px;
+text-align:center;
+font-size:4em;
+}
+body
+{
+background-image:url("https://th.bing.com/th/id/OIP.VJf9cpiSiRNaQlH7jp4mwQHaFL?pid=ImgDet&rs=1");
+background-size:cover;
+}

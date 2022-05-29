@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>Easy Coding</title>
+        <link rel="stylesheet" type="text/css" href="codingLevels.css">
+    </head>
+    <body>
+        <a href="coding.html"><button class="return">Back</button></a>
+        <h2>1. Atm</h2>
+        <hr>
+        <p>
+            Pooja would like to withdraw X $US from an ATM. The cash machine will only accept the transaction if X is a multiple of 5, and Pooja's account balance has enough cash to perform the withdrawal transaction (including bank charges). For each successful withdrawal the bank charges 0.50 $US. Calculate Pooja's account balance after an attempted transaction.
+        </p>
+        <hr>
+        <p>
+            <div>Input</div><br>
+Positive integer 0 < X <= 2000 - the amount of cash which Pooja wishes to withdraw.
+
+Nonnegative number 0<= Y <= 2000 with two digits of precision - Pooja's initial account balance.
+        </p>
+        <hr>
+        <p>
+           <div> Output</div><br>
+Output the account balance after the attempted transaction, given as a number with two digits of precision. If there is not enough money in the account to complete the transaction, output the current bank balance.
+        </p>
+        <hr>
+        <p>
+            <SCRIPT>
+               const viewSolution1 = document.querySelector('.q1');
+
+viewSolution1.addEventListener('toggle', event => {
+    if (event.target.open) {
+        console.log('open');
+    } else {
+        console.log('closed');
+    }
+});
+                </SCRIPT>
+                <details class="q1"><summary>View Solution</summary>
+                <p><b>Code in PYTHON</b></p>
+                <pre>
+                try:
+                    x,y = map(float, input().split())
+                    if x <= y-0.5 and x % 5==0:
+                        print("%.2f"%(y-x-0.50))
+                    else:
+                        print("%.2f"%y)
+                except:
+                    pass
+                </pre>
+            </details>
+                
+        </p>
+        <br>
+        <h2>2. First and Last Digit</h2>
+        <hr>
+        <p>
+            If Give an integer N . Write a program to obtain the sum of the first and last digits of this number.
+        </p>
+        <hr>
+        <p>
+            <div>Input</div><br>
+            The first line contains an integer T, the total number of test cases. Then follow T lines, each line contains an integer N.
+        </p>
+        <hr>
+        <p>
+           <div> Output</div><br>
+           For each test case, display the sum of first and last digits of N in a new line.
+        <hr>
+        <p>
+            <SCRIPT>
+                const viewSolution2 = document.querySelector('.q2');
+ 
+ viewSolution2.addEventListener('toggle', event => {
+     if (event.target.open) {
+         console.log('open');
+     } else {
+         console.log('closed');
+     }
+ });
+        </SCRIPT>
+        <details class="q2"><summary>View Solution</summary>
+        <p><b>Code in PYTHON</b></p>
+        <pre>
+                T = int(input())
+                while T > 0:
+                    n = (input())
+                    reverse = n[::-1]
+                    reverse = int(reverse)
+                    n = int(n)
+                    first_digit = reverse % 10
+                    last_digit = n % 10
+                    sum = first_digit + last_digit
+                    print(sum)
+                    T = T - 1
+        </pre>
+        </details>
+                
+        </p>
+        <br>
+        <h2>3. Turbo Sort</h2>
+        <hr>
+        <p>
+            Given the list of numbers, you are to sort them in non decreasing order.
+        </p>
+        <hr>
+        <p>
+            <div>Input</div><br>
+            t – the number of numbers in list, then t lines follow [t <= 10^6].
+            Each line contains one integer: N [0 <= N <= 10^6]
+        </p>
+        <hr>
+        <p>
+           <div> Output</div><br>
+           Output given numbers in non decreasing order.
+        </p>
+        <hr>
+        <p>
+            <SCRIPT>
+               const viewSolution3 = document.querySelector('.q3');
+
+viewSolution3.addEventListener('toggle', event => {
+    if (event.target.open) {
+        console.log('open');
+    } else {
+        console.log('closed');
+    }
+});
+                </SCRIPT>
+                <details class="q3"><summary>View Solution</summary>
+                <p><b>Code in PYTHON</b></p>
+                <pre>
+                a=[]
+                for _ in range(int(input())):
+                    a.append(int(input()))
+                a.sort()
+                for i in range(len(a)):
+                    print(a[i])
+                </pre>
+            </details>
+        </p>
+        <br>
+        <h2>4. Valid Triangles</h2>
+        <hr>
+        <p>
+            Write a program to check whether a triangle is valid or not, when the three angles of the triangle are the inputs. A triangle is valid if the sum of all the three angles is equal to 180 degrees.
+        </p>
+        <hr>
+        <p>
+            <div>Input</div><br>
+            The first line contains an integer T, the total number of testcases. Then T lines follow, each line contains three angles A, B and C, of the triangle separated by space.
+        </p>
+        <hr>
+        <p>
+           <div> Output</div><br>
+           For each test case, display 'YES' if the triangle is valid, and 'NO', if it is not, in a new line.
+        </p>
+        <hr>
+        <p>
+            <SCRIPT>
+               const viewSolution4 = document.querySelector('.q4');
+
+viewSolution4.addEventListener('toggle', event => {
+    if (event.target.open) {
+        console.log('open');
+    } else {
+        console.log('closed');
+    }
+});
+                </SCRIPT>
+                <details class="q4"><summary>View Solution</summary>
+                <p><b>Code in PYTHON</b></p>
+                <pre>
+                t=int(input())
+                for _ in range(t):
+                    a,b,c=map(int,input().split())
+                if a+b+c==180:
+                    print("YES")
+                else:
+                    print("NO")
+                </pre>
+            </details>
+        </p>
+        <br>
+        <h2>5. The Block Game</h2>
+        <hr>
+        <p>
+            The citizens of Byteland regularly play a game. They have blocks each denoting some integer from 0 to 9. These are arranged together in a random manner without seeing to form different numbers keeping in mind that the first block is never a 0. Once they form a number they read in the reverse order to check if the number and its reverse is the same. If both are same then the player wins. We call such numbers palindrome.
+
+            Ash happens to see this game and wants to simulate the same in the computer. As the first step he wants to take an input from the user and check if the number is a palindrome and declare if the user wins or not. 
+        </p>
+        <hr>
+        <p>
+            <div>Input</div><br>
+            The first line of the input contains T, the number of test cases. This is followed by T lines containing an integer N.
+        </p>
+        <hr>
+        <p>
+           <div> Output</div><br>
+           For each input output "wins" if the number is a palindrome and "loses" if not, in a new line
+        </p>
+        <hr>
+        <p>
+            <SCRIPT>
+               const viewSolution5 = document.querySelector('.q5');
+
+viewSolution5.addEventListener('toggle', event => {
+    if (event.target.open) {
+        console.log('open');
+    } else {
+        console.log('closed');
+    }
+});
+                </SCRIPT>
+                <details class="q5"><summary>View Solution</summary>
+                <p><b>Code in PYTHON</b></p>
+                <pre>
+                t=int(input())
+                while(t>0):
+                    a=(input())
+                    ch=str(a)
+                    rev=(ch[ : :-1])
+                        t=t-1
+                    if(rev==ch):
+                        print('wins')
+                    else:
+                        print('loses')
+                </pre>
+            </details>
+        </p>
+        <br>
+        <a href="coding.html"><button class="return">Back</button></a>
+
+    </body>
+</html>

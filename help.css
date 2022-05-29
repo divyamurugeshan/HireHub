@@ -1,0 +1,41 @@
+body{
+    background-image:url(https://th.bing.com/th/id/OIP.tqMRhR5wufABe1T3hws_ygHaHa?pid=ImgDet&rs=1);
+    background-size:cover;
+}
+h1{
+    text-align:center;
+    font-family: cursive;
+    font-size:35px;
+    text-shadow: 5px 5px white;
+    padding-top:2px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+    padding-right:50px;
+    font-size:20px;
+}
+
+.bstyle {
+  border-radius: 100%;
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  float:right;
+
+  }
+.bstyle:hover,
+.bstyle:focus {
+  box-shadow: 0px 4px 3px white,0px 8px 13px grey,0px 18px 23px black;
+  transform: translateY(-0.25em);
+}
+
+.bstyle {
+  float:right;
+  text-align:center;
+}

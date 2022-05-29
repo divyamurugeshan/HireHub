@@ -1,0 +1,118 @@
+body {
+    background-image: url("https://cdn.wallpapersafari.com/24/61/Fwz1HV.jpg");
+    background-size:cover;   
+}
+   
+   p{
+     
+     font-size: 19px;
+     color:black;
+     text-align:center;
+     font-family: serif;
+   }
+   h1{
+    padding-top:20px;
+     font-size: 45px;         
+     font-style: normal; 
+     font-weight: bold; 
+     color:black;
+     text-align: center; 
+     font-family: cursive;
+   }
+   
+
+.aptitudeOptionsButton {
+  border-radius: 100%;
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.aptitudeOptionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aptitudeOptionsContainer a:hover{
+    text-decoration: none;
+}
+#codingLevelContainer div {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+
+}
+#Container1, #Container2 {
+  margin-right: 14px;
+}
+.center {
+  margin-bottom: 100px;
+}
+
+#Container3, #Container4{
+  margin-right:14px;
+}
+
+  .title-word {
+    animation: color-animation 4s linear ;
+  }
+  
+  .title-word-1 {
+    --color-1: white;
+    --color-2: black;
+    --color-3: white;
+  }
+  
+  .title-word-2 {
+    --color-1: black;
+    --color-2: white;
+    --color-3: black;
+  }
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  
+  .title {
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  .return{
+    border-radius: 100%;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+    padding-top:15px;
+  }
+span{
+  font-weight:800;
+  font-family:cursive;
+}
+h3{
+  text-align: center;
+     padding-top:20px;
+}

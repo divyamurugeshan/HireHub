@@ -1,0 +1,62 @@
+body {
+    background-image: url("formulae.jpg");
+    background-size:cover;   
+}
+.easy,.medium,.hard{
+    border-radius: 100%;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.return{
+    border-radius: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: auto;
+    
+}
+
+  h2{
+    color:black;
+    font-family: serif;
+  }
+  h1{
+    font-family: cursive;
+    color:orange;
+      text-shadow: 2px 2px;
+      color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  text-align:center;
+  }
+
+#codingLevelContainer div {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+#easyContainer, #mediumContainer {
+  margin-right: 16px;
+}
+
+#returnContainer {
+  margin-top: 50px;
+}
+.center {
+  margin-bottom: 100px;
+}
+span{
+  font-family:cursive;
+}

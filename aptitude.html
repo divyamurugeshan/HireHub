@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="aptitude.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Aptitude</title>
+	<style>
+	body {
+    background-image: url("formulae.jpg");
+    background-size:cover;   
+}
+   
+   p{
+     
+     font-size: 19px;
+     color:black;
+     text-align:center;
+     font-family: serif;
+   }
+   h1{
+    padding-top:20px;
+     font-size: 45px;         
+     font-style: normal; 
+     font-weight: bold; 
+     color:black;
+     text-align: center; 
+     font-family: cursive;
+   }
+   
+
+.aptitudeOptionsButton {
+  border-radius: 100%;
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.aptitudeOptionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aptitudeOptionsContainer a:hover{
+    text-decoration: none;
+}
+#codingLevelContainer div {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+
+}
+#Container1, #Container2 {
+  margin-right: 14px;
+}
+.center {
+  margin-bottom: 100px;
+}
+
+#Container3, #Container4{
+  margin-right:14px;
+}
+
+  .title-word {
+    animation: color-animation 4s linear ;
+  }
+  
+  .title-word-1 {
+    --color-1: white;
+    --color-2: black;
+    --color-3: white;
+  }
+  
+  .title-word-2 {
+    --color-1: black;
+    --color-2: white;
+    --color-3: black;
+  }
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  
+  .title {
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  .return{
+    border-radius: 100%;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+    padding-top:15px;
+  }
+span{
+  font-weight:800;
+  font-family:cursive;
+}
+h3{
+  text-align: center;
+     padding-top:20px;
+}
+</style>
+</head>
+
+<body>
+    <h1 class="title">
+        <span class="title-word title-word-1">Aptitude</span>
+        <span class="title-word title-word-2">Test</span>
+      </h1>
+    <h3> Select one of the following topics</h3>
+    <br><br>
+    <div id="codingLevelContainer" class="d-flex">
+        <div id="Container1">
+            <p><span>Percentage,</span>  It is one of the basic topics used in our daily life. In a students life it is used to measure the progress, In sharemarkets it is used to share the profit equally among invested members and so on. Come let's learn to solve percentage!</p>
+            <a href="percentage.html"><button class="aptitudeOptionsButton">GO!</button></a>
+        </div>
+        <div id="Container2">
+            <p><span>Speed time and distance,</span> There exists an interesting relation between speed, time and distance. This can help us to choose our path of journey wisely, it can help us approximate the journey time and so on. come let us learn more about it!</p>
+            <a href="speed_time_distance.html"><button class="aptitudeOptionsButton">GO!</button></a>
+        </div>
+        <div id="Container3">
+            <p><span>Average,</span> Helps us calculate the average marks scored in each subject,average attendance percentage, average mileage of vehicles and so on. let's test the average of your performance! </p>
+            <a href="average.html"><button class="aptitudeOptionsButton">GO!</button></a>
+        </div>
+        <div id="Container4">
+            <p><span>Profit and loss,</span> We do almost everything keeping profit or the end result in our mind. This calculation is very important to understand as it's used in most of our daily activities. Come on let's make profits over profit and loss topic! </p>
+            <a href="profitloss.html"><button class="aptitudeOptionsButton">GO!</button></a>
+        </div>
+        <div id="Container5">
+            <p><span>Compound Interest,</span> In simple terms it doubles your profits quickly. Wise investment matters to see fortunate results. Understanding the formula's and it's working is important as the topic completely relies on formula. Come play around with the formula!</p>
+            <a href="ci.html"><button class="aptitudeOptionsButton">GO!</button></a>
+        </div>
+    </div>
+
+    <div id="returnContainer" >
+        <a href="hh_student.html"><button class="return">Back</button></a>
+    </div>
+</div>
+</body>

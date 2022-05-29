@@ -1,0 +1,25 @@
+body{
+    background-image:url("https://th.bing.com/th/id/OIP.EuWR5COUTILzHnxs8lLzuwHaFS?pid=ImgDet&rs=1");
+    background-size:cover;
+}
+div{
+    font-family: fantasy;
+}
+h2{
+    font-family: cursive;
+}
+summary{
+    font-family: cursive;
+}
+.return {
+    border-radius: 100%;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+}
